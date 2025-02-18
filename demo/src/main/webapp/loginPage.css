@@ -1,0 +1,226 @@
+/* 🔥 Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background: #09080D; /* Dark Theme */
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🚀 Sidebar */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(135deg, #191BDF, #09080D);
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.6);
+    padding-top: 20px;
+    transition: width 0.4s ease-in-out;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    width: 140px;
+}
+
+.sidebar-links a i {
+    transition: margin-right 0.3s ease-in-out;
+}
+
+.sidebar.collapsed .sidebar-links a i {
+    margin-right: 10;
+    text-align: center;
+    width: 150%;
+}
+
+/* 🚀 Sidebar Top */
+.sidebar .sidebar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* 🔗 Sidebar Logo */
+.sidebar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFEA00; /* Yellow */
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* 🎭 Expand Button */
+.sidebar .expand-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔍 Search Bar */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.search-wrapper input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+/* 🚀 Sidebar Navigation */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 🚘 Sidebar Items */
+.sidebar-links li {
+    padding: 10px;
+}
+
+/* 🔗 Sidebar Links */
+.sidebar-links a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Sidebar Hover Effect */
+.sidebar-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.08);
+    box-shadow: 0px 5px 15px rgba(65, 169, 255, 0.6);
+    border-left: 5px solid #FFEA00; /* Yellow Accent */
+}
+
+/* Sidebar Active State */
+.sidebar-links a.active {
+    background: rgba(255, 234, 0, 0.4);
+    border-left: 5px solid #FFEA00;
+}
+
+/* Sidebar Icons */
+.sidebar-links a i {
+    font-size: 22px;
+    margin-right: 12px;
+    color: #FFEA00; /* Yellow */
+}
+
+/* 🌟 Hero Section */
+.hero-title {
+    font-size: 3.5rem;
+    color: #FFEA00;
+    text-shadow: 0px 0px 15px rgba(255, 234, 0, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+/* 🚀 Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 0px 15px rgba(255, 234, 0, 0.5);
+}
+
+/* 📝 Form Styling */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(255, 234, 0, 0.8);
+}
+
+/* 🚀 Login Button */
+.login-btn {
+    width: 100%;
+    background: #FFEA00;
+    color: black;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+    background: #FF9900;
+    transform: scale(1.05);
+}
+
+/* 🚀 Error Messages */
+.error-message {
+    background: rgba(255, 0, 0, 0.7);
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+small {
+    color: #FFEA00;
+}
+
+/* 🔗 Auth Links */
+.auth-link {
+    margin-top: 10px;
+}
+
+.auth-link a {
+    color: #FFEA00;
+    text-decoration: none;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}

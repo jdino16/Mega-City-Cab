@@ -1,0 +1,272 @@
+/* 🔥 Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background: #09080D; /* Dark Theme */
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🚀 Sidebar */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(135deg, #191BDF, #09080D);
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.6);
+    padding-top: 20px;
+    transition: width 0.4s ease-in-out;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    width: 140px;
+}
+
+.sidebar-links a i {
+    transition: margin-right 0.3s ease-in-out;
+}
+
+.sidebar.collapsed .sidebar-links a i {
+    margin-right: 10;
+    text-align: center;
+    width: 150%;
+}
+
+/* 🚀 Sidebar Top */
+.sidebar .sidebar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* 🔗 Sidebar Logo */
+.sidebar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFEA00; /* Yellow */
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* 🎭 Expand Button */
+.sidebar .expand-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔍 Search Bar */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.search-wrapper input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+/* 🚀 Sidebar Navigation */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 🚘 Sidebar Items */
+.sidebar-links li {
+    padding: 10px;
+}
+
+/* 🔗 Sidebar Links */
+.sidebar-links a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Sidebar Hover Effect */
+.sidebar-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.08);
+    box-shadow: 0px 5px 15px rgba(65, 169, 255, 0.6);
+    border-left: 5px solid #FFEA00; /* Yellow Accent */
+}
+
+/* Sidebar Active State */
+.sidebar-links a.active {
+    background: rgba(255, 234, 0, 0.4);
+    border-left: 5px solid #FFEA00;
+}
+
+/* Sidebar Icons */
+.sidebar-links a i {
+    font-size: 22px;
+    margin-right: 12px;
+    color: #FFEA00; /* Yellow */
+}
+
+/* 🌟 Hero Section */
+.hero-title {
+    font-size: 3.5rem;
+    color: #FFEA00;
+    text-shadow: 0px 0px 15px rgba(255, 234, 0, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+/* 🚀 Sign-Up Container with Glassmorphism */
+.signup-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    width: 600px;
+    box-shadow: 0px 0px 50px rgba(255, 234, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 📝 Hover Effect */
+.signup-container:hover {
+    transform: scale(1.02);
+}
+
+/* 📝 Form Styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* 📌 Form Labels */
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #FFEA00; /* Yellow */
+}
+
+/* ✨ Form Inputs */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🔥 Input Focus Effect */
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(255, 234, 0, 0.8);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* 🚀 Sign-Up Button with Glow Effect */
+.signup-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #FFD700, #FF9900);
+    color: black;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(255, 234, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+/* 🚀 Button Hover */
+.signup-btn:hover {
+    background: linear-gradient(135deg, #FF9900, #FFD700);
+    transform: scale(1.08);
+    box-shadow: 0px 0px 25px rgba(255, 234, 0, 1);
+}
+
+/* 🚀 Error Messages */
+.error-message {
+    background: rgba(255, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* 🔗 Auth Links */
+.auth-link {
+    margin-top: 15px;
+}
+
+.auth-link a {
+    color: #FFEA00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+    color: #FF9900;
+}
+
+/* 🌀 Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply Animation */
+.signup-container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .signup-container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px;
+    }
+}

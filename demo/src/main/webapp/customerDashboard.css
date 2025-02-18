@@ -1,0 +1,107 @@
+/* 🌟 General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* ✅ Sidebar Navigation */
+.sidebar {
+    width: 250px;
+    background: #222;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-links li {
+    margin: 20px 0;
+}
+
+.sidebar-links a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-links a:hover {
+    color: #FFD700;
+}
+
+/* ✅ Dashboard Container */
+.dashboard-container {
+    margin-left: 260px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* ✅ Welcome Section */
+.welcome-box {
+    background: #FFD700;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ✅ Stats Section */
+.stats-container {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-box {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* ✅ Booking List */
+.booking-list {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* ✅ Quick Actions */
+.quick-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.action-btn {
+    background: #5C67F2;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.action-btn:hover {
+    background: #4a54e1;
+}

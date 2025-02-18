@@ -1,0 +1,416 @@
+/* 🔥 Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background: #09080D; /* Dark Theme */
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🚀 Sidebar */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(135deg, #191BDF, #09080D);
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.6);
+    padding-top: 20px;
+    transition: width 0.4s ease-in-out;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    width: 140px;
+}
+
+.sidebar-links a i {
+    transition: margin-right 0.3s ease-in-out;
+}
+
+.sidebar.collapsed .sidebar-links a i {
+    margin-right: 10;
+    text-align: center;
+    width: 150%;
+}
+
+/* 🚀 Sidebar Top */
+.sidebar .sidebar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* 🔗 Sidebar Logo */
+.sidebar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFEA00; /* Yellow */
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* 🎭 Expand Button */
+.sidebar .expand-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔍 Search Bar */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.search-wrapper input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+/* 🚀 Sidebar Navigation */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 🚘 Sidebar Items */
+.sidebar-links li {
+    padding: 10px;
+}
+
+/* 🔗 Sidebar Links */
+.sidebar-links a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Sidebar Hover Effect */
+.sidebar-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.08);
+    box-shadow: 0px 5px 15px rgba(65, 169, 255, 0.6);
+    border-left: 5px solid #FFEA00; /* Yellow Accent */
+}
+
+/* Sidebar Active State */
+.sidebar-links a.active {
+    background: rgba(255, 234, 0, 0.4);
+    border-left: 5px solid #FFEA00;
+}
+
+/* Sidebar Icons */
+.sidebar-links a i {
+    font-size: 22px;
+    margin-right: 12px;
+    color: #FFEA00; /* Yellow */
+}
+
+/* 🌟 Hero Section */
+.hero-title {
+    font-size: 3.5rem;
+    color: #FFEA00;
+    text-shadow: 0px 0px 15px rgba(255, 234, 0, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* 🚀 Main Content */
+.content {
+    margin-left: 260px;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+}
+/* ✅ Improved Fleet Section Alignment */
+.fleet-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+/* ✅ Center Fleet Cards & Adjust Layout */
+.fleet-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures no horizontal overflow */
+    gap: 20px;
+    padding: 10px 0;
+    max-width: 100%;
+}
+
+/* ✅ Fix Fleet Cards' Sizing & Positioning */
+.fleet-card {
+    flex: 1 1 300px;
+    background: linear-gradient(135deg, #202020, #111111);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(255, 234, 0, 0.3);
+    min-width: 250px; /* Prevents cards from shrinking too much */
+}
+
+/* ✅ Fix Next/Prev Button Positioning */
+.prev-btn, .next-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure buttons stay visible */
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* ✅ Improve Navbar Spacing */
+.sidebar-top {
+    padding: 20px;
+}
+
+/* ✅ Ensure Fully Responsive Design */
+@media screen and (max-width: 1024px) {
+    .fleet-container {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fleet-card {
+        flex: 1 1 100%; /* Makes cards full-width for better mobile layout */
+    }
+
+    .sidebar {
+        width: 80px;
+    }
+
+    .content {
+        margin-left: 90px;
+        width: calc(100% - 90px);
+    }
+
+    .fleet-slider {
+        flex-direction: column;
+    }
+
+    .prev-btn, .next-btn {
+        position: relative;
+        top: auto;
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .fleet-title {
+        font-size: 2rem;
+    }
+
+    .fleet-description {
+        font-size: 14px;
+    }
+}
+
+
+/* 🌟 Fleet Section */
+.fleet-title {
+    font-size: 3rem;
+    color: #FFEA00;
+    text-shadow: 0px 0px 15px rgba(255, 234, 0, 0.8);
+    text-align: center;
+}
+
+.fleet-description {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ✅ Fleet Section Centered */
+.fleet-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+/* ✅ Fleet Cards Fix */
+.fleet-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 90%;
+    padding: 10px 0;
+}
+
+/* 🚘 Fleet Cards */
+.fleet-card {
+    flex: 0 0 320px;
+    background: linear-gradient(135deg, #202020, #111111);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(255, 234, 0, 0.3);
+}
+
+/* 🚗 Fleet Icons */
+.fleet-icon {
+    font-size: 60px;
+    color: #FFEA00;
+    margin-bottom: 15px;
+}
+
+/* 🔹 Fleet Card Details */
+.fleet-details {
+    padding: 15px;
+}
+
+.fleet-details h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFEA00;
+}
+
+.fleet-details p {
+    font-size: 16px;
+    color: #CCCCCC;
+    margin-bottom: 10px;
+}
+
+/* ✅ Fleet List Styling */
+.fleet-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fleet-details li {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+}
+
+.fleet-details i {
+    color: #FFEA00;
+}
+
+/* 🔄 Slider Buttons */
+.prev-btn, .next-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* ✨ 3D Hover Effect */
+.fleet-card:hover {
+    transform: scale(1.1) rotateY(10deg);
+    box-shadow: 0px 5px 15px rgba(255, 234, 0, 0.6);
+}
+
+/* ✅ Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+    .fleet-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fleet-card {
+        flex: 0 0 280px;
+    }
+
+    .fleet-title {
+        font-size: 2.5rem;
+    }
+
+    .fleet-description {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .fleet-card {
+        flex: 0 0 240px;
+        padding: 15px;
+    }
+
+    .fleet-title {
+        font-size: 2rem;
+    }
+
+    .fleet-description {
+        font-size: 14px;
+    }
+}

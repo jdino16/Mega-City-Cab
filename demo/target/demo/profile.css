@@ -1,0 +1,217 @@
+/* 🔥 Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background: #09080D; /* Dark Theme */
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🚀 Sidebar */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(135deg, #191BDF, #09080D);
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.6);
+    padding-top: 20px;
+    transition: width 0.4s ease-in-out;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    width: 140px;
+}
+
+.sidebar-links a i {
+    transition: margin-right 0.3s ease-in-out;
+}
+
+.sidebar.collapsed .sidebar-links a i {
+    margin-right: 10;
+    text-align: center;
+    width: 150%;
+}
+
+/* 🚀 Sidebar Top */
+.sidebar .sidebar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* 🔗 Sidebar Logo */
+.sidebar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFEA00; /* Yellow */
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* 🎭 Expand Button */
+.sidebar .expand-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔍 Search Bar */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.search-wrapper input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+/* 🚀 Sidebar Navigation */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 🚘 Sidebar Items */
+.sidebar-links li {
+    padding: 10px;
+}
+
+/* 🔗 Sidebar Links */
+.sidebar-links a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Sidebar Hover Effect */
+.sidebar-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.08);
+    box-shadow: 0px 5px 15px rgba(65, 169, 255, 0.6);
+    border-left: 5px solid #FFEA00; /* Yellow Accent */
+}
+
+/* Sidebar Active State */
+.sidebar-links a.active {
+    background: rgba(255, 234, 0, 0.4);
+    border-left: 5px solid #FFEA00;
+}
+
+/* Sidebar Icons */
+.sidebar-links a i {
+    font-size: 22px;
+    margin-right: 12px;
+    color: #FFEA00; /* Yellow */
+}
+
+/* 🌟 Hero Section */
+.hero-title {
+    font-size: 3.5rem;
+    color: #FFEA00;
+    text-shadow: 0px 0px 15px rgba(255, 234, 0, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* 🚀 Main Content */
+.content {
+    margin-left: 260px;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+}
+/* 👤 Profile Section */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 5px 15px rgba(255, 234, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(255, 234, 0, 0.6);
+}
+
+/* 🔹 Profile Header */
+.profile-header h1 {
+    color: #FFEA00;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.profile-header p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* 🔹 Profile Details */
+.profile-details {
+    margin-top: 20px;
+}
+
+.profile-details p {
+    font-size: 1.2rem;
+    color: white;
+    margin: 8px 0;
+}
+
+.profile-details strong {
+    color: #FFEA00;
+}
+
+/* ✅ Responsive Design */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+
+    .content {
+        margin-left: 90px;
+        width: calc(100% - 90px);
+    }
+
+    .sidebar-links a span {
+        display: none;
+    }
+
+    .profile-card {
+        width: 90%;
+    }
+}

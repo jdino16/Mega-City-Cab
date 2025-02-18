@@ -1,0 +1,233 @@
+/* 🔥 Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background: #09080D; /* Dark Theme */
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🚀 Sidebar */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(135deg, #191BDF, #09080D);
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.6);
+    padding-top: 20px;
+    transition: width 0.4s ease-in-out;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    width: 140px;
+}
+
+.sidebar-links a i {
+    transition: margin-right 0.3s ease-in-out;
+}
+
+.sidebar.collapsed .sidebar-links a i {
+    margin-right: 10;
+    text-align: center;
+    width: 150%;
+}
+
+/* 🚀 Sidebar Top */
+.sidebar .sidebar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* 🔗 Sidebar Logo */
+.sidebar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFEA00; /* Yellow */
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* 🎭 Expand Button */
+.sidebar .expand-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔍 Search Bar */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.search-wrapper input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+/* 🚀 Sidebar Navigation */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 🚘 Sidebar Items */
+.sidebar-links li {
+    padding: 10px;
+}
+
+/* 🔗 Sidebar Links */
+.sidebar-links a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Sidebar Hover Effect */
+.sidebar-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.08);
+    box-shadow: 0px 5px 15px rgba(65, 169, 255, 0.6);
+    border-left: 5px solid #FFEA00; /* Yellow Accent */
+}
+
+/* Sidebar Active State */
+.sidebar-links a.active {
+    background: rgba(255, 234, 0, 0.4);
+    border-left: 5px solid #FFEA00;
+}
+
+/* Sidebar Icons */
+.sidebar-links a i {
+    font-size: 22px;
+    margin-right: 12px;
+    color: #FFEA00; /* Yellow */
+}
+
+/* 🌟 Hero Section */
+.hero-title {
+    font-size: 3.5rem;
+    color: #FFEA00;
+    text-shadow: 0px 0px 15px rgba(255, 234, 0, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* 🚀 Main Content */
+.content {
+    margin-left: 260px;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+}
+/* 📞 Contact Section */
+.contact-hero {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #141E61, #09080D);
+    text-align: center;
+    border-bottom: 3px solid #FFEA00;
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFEA00;
+    text-shadow: 0px 0px 20px rgba(255, 234, 0, 0.9);
+}
+
+.contact-description {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* 🌍 Contact Details */
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.contact-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    width: 260px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0px 5px 15px rgba(255, 234, 0, 0.3);
+}
+
+.contact-box h2 {
+    font-size: 1.5rem;
+    color: #FFEA00;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    font-size: 1.1rem;
+    color: #DDD;
+}
+
+.contact-box a {
+    color: #FFEA00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-box a:hover {
+    color: #FFA500;
+}
+
+.contact-box:hover {
+    background: #FFEA00;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(255, 234, 0, 0.6);
+}
+
+.contact-box:hover h2, .contact-box:hover p, .contact-box:hover a {
+    color: black;
+}
+
+/* ✅ Responsive Design */
+@media screen and (max-width: 1024px) {
+    .contact-details {
+        max-width: 90%;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+}

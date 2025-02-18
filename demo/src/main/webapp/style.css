@@ -1,0 +1,511 @@
+/* 🔥 Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background: #09080D; /* Dark Theme */
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🚀 Sidebar */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(135deg, #191BDF, #09080D);
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.6);
+    padding-top: 20px;
+    transition: width 0.4s ease-in-out;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    width: 140px;
+}
+
+.sidebar-links a i {
+    transition: margin-right 0.3s ease-in-out;
+}
+
+.sidebar.collapsed .sidebar-links a i {
+    margin-right: 10;
+    text-align: center;
+    width: 150%;
+}
+
+/* 🚀 Sidebar Top */
+.sidebar .sidebar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* 🔗 Sidebar Logo */
+.sidebar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFEA00; /* Yellow */
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* 🎭 Expand Button */
+.sidebar .expand-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔍 Search Bar */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.search-wrapper input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+/* 🚀 Sidebar Navigation */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 🚘 Sidebar Items */
+.sidebar-links li {
+    padding: 10px;
+}
+
+/* 🔗 Sidebar Links */
+.sidebar-links a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Sidebar Hover Effect */
+.sidebar-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.08);
+    box-shadow: 0px 5px 15px rgba(65, 169, 255, 0.6);
+    border-left: 5px solid #FFEA00; /* Yellow Accent */
+}
+
+/* Sidebar Active State */
+.sidebar-links a.active {
+    background: rgba(255, 234, 0, 0.4);
+    border-left: 5px solid #FFEA00;
+}
+
+/* Sidebar Icons */
+.sidebar-links a i {
+    font-size: 22px;
+    margin-right: 12px;
+    color: #FFEA00; /* Yellow */
+}
+
+/* 🌟 Hero Section */
+.hero-title {
+    font-size: 3.5rem;
+    color: #FFEA00;
+    text-shadow: 0px 0px 15px rgba(255, 234, 0, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* 🚀 Main Content */
+.content {
+    margin-left: 260px;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.home-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-button {
+    background: #ffcc00;
+    color: #000;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background: #ff9900;
+}
+
+
+/* 🚀 Floating Action Button */
+.fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0033cc;
+    color: #FFEA00;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+}
+
+/* ⏳ Real-time Date & Time */
+.date-time {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #FFEA00;
+}
+
+/* 🚀 Modern Popup Message */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: linear-gradient(135deg, #0011cc, #000066);
+    color: #FFEA00;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* 🟡 Show Popup Animation */
+.popup.active {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* 🎭 Popup Title */
+.popup-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(255, 234, 0, 0.8);
+    margin-bottom: 10px;
+}
+
+/* ✨ Popup Message */
+.popup-message {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* 🔘 Close Button */
+.popup-close {
+    background: linear-gradient(135deg, #FFEA00, #FFD700);
+    color: #000;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🔥 Close Button Hover */
+.popup-close:hover {
+    background: linear-gradient(135deg, #FFD700, #FFEA00);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 234, 0, 0.8);
+}
+
+/* 🚀 Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2000;
+    animation: fadeOut 3s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+/* 🔄 Loading Text Animation */
+@keyframes glowingText {
+    0% { text-shadow: 0px 0px 10px rgba(255, 234, 0, 0.8); }
+    50% { text-shadow: 0px 0px 20px rgba(255, 234, 0, 1); }
+    100% { text-shadow: 0px 0px 10px rgba(255, 234, 0, 0.8); }
+}
+.loading-text {
+    font-size: 2rem;
+    color: #FFEA00;
+    animation: glowingText 1.5s infinite alternate;
+}
+
+/* 🚀 Animated Progress Bar */
+.loading-progress {
+    width: 300px;
+    height: 10px;
+    border-radius: 5px;
+    background: rgba(255, 234, 0, 0.2);
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.loading-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #0033cc, #FFEA00);
+    animation: progressBarFill 3s ease-in-out forwards;
+}
+
+@keyframes progressBarFill {
+    0% { width: 0%; }
+    50% { width: 50%; }
+    100% { width: 100%; }
+}
+
+/* 🌟 Fade-Out Animation */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+/* 📍 Updated Contact Section - Smaller Size */
+.contact-section {
+    text-align: center;
+    padding: 20px;
+    width: 300px;  /* Smaller width */
+    background: linear-gradient(135deg, #FFEA00, #0033cc);
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+    animation: fadeInUp 0.5s ease-in-out;
+    position: absolute;
+    right: 20px; /* Move it slightly to the right */
+    bottom: 20px; /* Adjust position */
+}
+
+/* 📢 Contact Title */
+.contact-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* 📧 Contact Container */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 📧 Contact Items */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    width: 100%;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🚀 Animated Contact Icons */
+.contact-icon {
+    font-size: 18px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 📩 Contact Links */
+.contact-item p, .contact-item a {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-item a:hover {
+    color: #FFD700;
+}
+
+/* 📍 Glowing Toggle Button with Centered Icon */
+.toggle-btn {
+    background: rgb(255, 255, 0);  /* Yellow Background */
+    color: rgb(0, 0, 0);  /* Black Text */
+    font-size: 15px;  /* Slightly bigger font */
+    font-weight: bold;
+    padding: 20px;
+    border: 3px solid rgb(255, 200, 0);  /* Border Color */
+    border-radius: 50%;  /* Makes it a circular button */
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Center everything */
+    margin: 10px auto;
+    width: 120px;  /* Circular button size */
+    height: 120px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 0, 0.8);  /* Initial Glow Effect */
+    animation: glowingEffect 2s infinite alternate;  /* Continuous Glow */
+}
+
+/* 📍 Toggle Button Icon */
+.toggle-btn i {
+    font-size: 24px;  /* Bigger icon */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 📍 Hover Effects */
+.toggle-btn:hover {
+    background: rgb(255, 255, 255);  /* White Background */
+    color: black;
+    border-color: rgb(255, 150, 0);  /* Orange Border on Hover */
+    box-shadow: 0px 0px 20px rgba(255, 150, 0, 1);  /* Brighter Glow */
+    transform: scale(1.15);
+}
+
+/* 📍 Active Click Effect */
+.toggle-btn:active {
+    background: rgb(255, 200, 0);
+    border-color: rgb(255, 100, 0);
+    transform: scale(1);
+}
+
+/* 🔥 Glowing Animation */
+@keyframes glowingEffect {
+    0% {
+        box-shadow: 0px 0px 10px rgba(255, 255, 0, 0.8);
+        border-color: rgb(255, 200, 0);
+    }
+    50% {
+        box-shadow: 0px 0px 15px rgba(255, 150, 0, 1);
+        border-color: rgb(255, 150, 0);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgba(255, 100, 0, 1);
+        border-color: rgb(255, 100, 0);
+    }
+}
+
+/* 📍 Hide Contact Section by Default */
+.hidden {
+    display: none;
+}
+
+/* 🔺 Smooth Fade-in Animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* 📢 Testimonial Section */
+.testimonial-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.testimonial-title {
+    font-size: 20px;
+    color: #FFEA00;
+    margin-bottom: 15px;
+}
+
+.testimonial-slider {
+    width: 300px;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-slide {
+    display: none;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+/* 🏁 Book Your Ride Section */
+.book-ride-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.book-ride-text {
+    font-size: 20px;
+    color: #FFEA00;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 10px rgba(255, 234, 0, 0.8);
+}
+
+/* ✨ Book Ride Button */
+.book-ride-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background: linear-gradient(135deg, #FFD700, #FFEA00);
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0px 5px 15px rgba(255, 234, 0, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.book-ride-btn:hover {
+    background: linear-gradient(135deg, #FFCC00, #FFD700);
+    transform: scale(1.1);
+    box-shadow: 0px 8px 18px rgba(255, 234, 0, 1);
+}
