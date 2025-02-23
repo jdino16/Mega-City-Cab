@@ -8,8 +8,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile - Mega City Cab</title>
-    <link rel="stylesheet" href="profile.css">
-    <script src="profile.js" defer></script>
+    <link rel="stylesheet" href="styles/profile.css">
+    <script src="js/profile.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -40,7 +41,7 @@
     conn.close();
 %>
 
-    <!-- ✅ Profile Section -->
+
     <div class="profile-container">
         <h2>👤 My Profile</h2>
 
@@ -77,6 +78,25 @@
             <button type="submit">🔄 Update Password</button>
         </form>
     </div>
+
+<div class="quick-actions">
+    <a href="booking.jsp" class="action-btn"><i class="fas fa-calendar-check"></i> View Bookings</a>
+    <a href="billing.jsp" class="action-btn"><i class="fas fa-credit-card"></i> Billing & Transactions</a>
+    <a href="profile1.jsp" class="action-btn"><i class="fas fa-user-edit"></i> Edit Profile</a>
+    <a href="support.jsp" class="action-btn"><i class="fas fa-question-circle"></i> Get Support</a>
+</div>
+
+
+<nav class="navbar">
+    <div class="navbar">
+        <a href="index.jsp" class="nav-link"><i class="fas fa-home"></i> Home</a>
+        <a href="our-cabs.jsp" class="nav-link"><i class="fas fa-taxi"></i> Our Cabs</a>
+        <a href="company.jsp" class="nav-link"><i class="fas fa-building"></i> Company</a>
+        <a href="booking.jsp" class="nav-link"><i class="fas fa-taxi"></i> Booking</a>
+        <a href="profile1.jsp" class="nav-link"><i class="fas fa-user-edit"></i> Manage Profile</a>
+        <a href="logout.jsp" class="nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a>    
+    </div>
+</nav>
 
 </body>
 </html>

@@ -6,24 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings - Mega City Cab</title>
 
-    <!-- Tailwind CSS -->
+
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- FontAwesome for Icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="settings.css">
 </head>
 <body class="bg-black text-white">
 
-    <!-- 🚀 Sidebar Navigation -->
+   
     <nav class="sidebar">
         <div class="sidebar-top">
             <h2 class="logo neon-text">Mega City Cab</h2>
             <button class="expand-btn"><i class="fas fa-bars"></i></button>
         </div>
-        <!-- Live Search -->
+ 
         <div class="search-wrapper">
             <input type="text" id="searchInput" placeholder="Search...">
             <i class="fas fa-search"></i>
@@ -40,7 +39,7 @@
         </ul>
     </nav>
 
-    <!-- ⚙️ Settings Section -->
+
     <main class="content">
         <section class="settings-container">
             <div class="settings-card">
@@ -59,7 +58,6 @@
         </section>
     </main>
 
-    <!-- JavaScript -->
     <script src="settings.js"></script>
 </body>
 </html>

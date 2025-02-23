@@ -28,11 +28,11 @@ public class ForgotPasswordServlet extends HttpServlet {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                // Store email in session for resetting password
+               
                 HttpSession session = request.getSession();
                 session.setAttribute("resetEmail", email);
 
-                // Redirect to Reset Password Page
+               
                 response.sendRedirect("ResetPassword.jsp");
             } else {
                 request.setAttribute("error", "⚠️ Email not found. Please enter a registered email.");

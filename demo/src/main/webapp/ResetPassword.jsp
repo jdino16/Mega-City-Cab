@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Reset Password - Mega City Cab</title>
-    <link rel="stylesheet" href="resetPass.css">
+    <link rel="stylesheet" href="styles/resetPass.css">
 </head>
 <body>
     <div class="reset-pass-container">

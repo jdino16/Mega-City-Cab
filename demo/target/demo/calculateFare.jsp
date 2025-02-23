@@ -15,12 +15,12 @@
     String error = request.getParameter("error");
 %>
 
-<!-- ✅ Display Error Message if Any -->
+
 <% if (error != null) { %>
     <div class="alert error">⚠️ <%= error %></div>
 <% } %>
 
-<!-- ✅ Fare Calculation Form -->
+
 <div class="fare-container">
     <h2>📍 Calculate Your Fare</h2>
     <form action="CalculateFareServlet" method="post">

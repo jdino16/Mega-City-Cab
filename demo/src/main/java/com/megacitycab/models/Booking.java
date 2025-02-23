@@ -13,7 +13,7 @@ public class Booking {
     private Date date;
     private String status;
 
-    // Constructor
+
     public Booking(int bookingId, int userId, String customerName, String phone, String address,
                    String pickup, String destination, Date date, String status) {
         this.bookingId = bookingId;
@@ -27,7 +27,7 @@ public class Booking {
         this.status = status;
     }
 
-    // Getters and Setters
+ 
     public int getBookingId() { return bookingId; }
     public void setBookingId(int bookingId) { this.bookingId = bookingId; }
 

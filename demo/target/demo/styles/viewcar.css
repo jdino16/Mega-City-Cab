@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebars */
+.sidebar-left, .sidebar-right {
+    width: 220px;
+    background-color: #1a1a1a;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.sidebar-left {
+    left: 0;
+}
+
+.sidebar-right {
+    right: 0;
+}
+
+.logo {
+    text-align: center;
+    color: #ffcc00;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.nav-link, .action-btn {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    transition: 0.3s;
+    border-radius: 8px;
+    margin: 5px 10px;
+}
+
+.nav-link:hover, .action-btn:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+/* Main Content */
+.content {
+    margin: 20px 240px;
+    padding: 20px;
+    flex: 1;
+}
+
+.car-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.car-table th, .car-table td {
+    padding: 10px;
+    border: 1px solid #ffcc00;
+    text-align: left;
+}
+
+.car-table th {
+    background-color: #333;
+}
+
+.action-link {
+    color: #ffcc00;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.action-link:hover {
+    color: #ff9900;
+}

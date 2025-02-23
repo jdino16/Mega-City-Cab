@@ -1,53 +1,146 @@
-/* ✅ General Styling */
+/* 🔥 Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    font-family: 'Inter', sans-serif;
     display: flex;
+    min-height: 100vh;
+    background: #09080D; /* Dark Theme */
+    color: white;
     flex-direction: column;
     align-items: center;
 }
 
-/* ✅ Billing Container */
+/* 🚀 Navbar Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #222222; /* Dark background for navbar */
+    padding: 15px 20px;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 20px;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects */
+.navbar a:hover {
+    background: #FFEA00;  /* Bright yellow */
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 234, 0, 0.8);
+}
+
+.navbar a i {
+    margin-right: 10px;
+}
+
+/* ✅ Billing Section */
 .billing-container {
-    width: 70%;
-    background: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #222222;
+    padding: 40px;
+    margin: 100px auto;
+    border-radius: 20px;
+    max-width: 900px;
+    width: 90%;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    color: white;
     text-align: center;
 }
 
-h2 {
-    color: #5C67F2;
-}
-
-/* ✅ Table Styles */
+/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
-    text-align: left;
-    margin-top: 20px;
+    font-size: 1rem;
+    margin-top: 30px;
 }
 
 th, td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #333;
 }
 
+/* Table Header Styling */
 th {
-    background: #5C67F2;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-    color: #5C67F2;
+    background-color: #333;
+    color: #FFEA00; /* Yellow */
     font-weight: bold;
 }
 
-a:hover {
-    color: #4a54e1;
+/* Table Row Styling */
+tr:nth-child(even) {
+    background-color: #282828;
+}
+
+tr:nth-child(odd) {
+    background-color: #333333;
+}
+
+tr:hover {
+    background-color: rgba(255, 234, 0, 0.1); /* Light yellow highlight */
+}
+
+/* Success and Alert Message Styling */
+.success {
+    background-color: #27AE60;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
+    color: white;
+    text-align: center;
+}
+
+/* ✅ Action Buttons Styling */
+.quick-actions {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.quick-actions .action-btn {
+    padding: 16px 35px;
+    background: linear-gradient(135deg, #FFD700, #FF9900);
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 234, 0, 0.5);
+    text-align: center;
+    min-width: 200px;
+    margin: 10px;
+    display: inline-block;
+}
+
+/* Hover Effects for Action Buttons */
+.quick-actions .action-btn:hover {
+    background: linear-gradient(135deg, #FF9900, #FFD700);
+    box-shadow: 0px 10px 30px rgba(255, 234, 0, 1);
+    transform: scale(1.1);
+    cursor: pointer;
 }

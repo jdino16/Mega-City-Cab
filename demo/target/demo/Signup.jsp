@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Mega City Cab</title>
 
-    <!-- ✅ Tailwind CSS -->
+ 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- ✅ FontAwesome for Icons -->
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- ✅ Google Fonts -->
+ 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- ✅ Custom Styles -->
+   
     <link rel="stylesheet" href="signupPage.css">
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
- <!-- 🚀 Sidebar Navigation -->
+
  <nav class="sidebar">
     <div class="sidebar-top">
         <h2 class="logo neon-text">Mega City Cab</h2>
@@ -37,18 +37,18 @@
     </ul>
 </nav>
 
-    <!-- 🚀 Sign-Up Form -->
+   
     <div class="signup-container">
         <h2 class="text-3xl font-semibold neon-glow">📝 Create Your Account</h2>
         <p class="text-gray-300">Register to start your journey with Mega City Cab</p>
 
-        <!-- 🔹 Error Message Display -->
+   
         <% String error = request.getParameter("error"); %>
         <% if (error != null) { %>
             <p class="error-message">⚠️ <%= error %></p>
         <% } %>
 
-        <!-- 🔹 Sign-Up Form -->
+ 
         <form action="SignupServlet" method="post" id="signupForm">
             <div class="form-group">
                 <label for="username"><i class="fas fa-user"></i> Username</label>
@@ -95,13 +95,13 @@
             <button type="submit" class="signup-btn">📝 Register</button>
         </form>
 
-        <!-- 🔹 Links -->
+      
         <p class="auth-link">
             <a href="LoginPage.jsp">Already have an account? Login</a>
         </p>
     </div>
 
-    <!-- ✅ JavaScript -->
+    
     <script src="signupPage.js"></script>
 
 </body>

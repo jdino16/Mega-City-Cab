@@ -11,12 +11,12 @@
         This web application is designed to manage cab bookings for Mega City Cab.
     </description>
 
-    <!-- ✅ Set the correct welcome page -->
+
     <welcome-file-list>
         <welcome-file>jsp/index.jsp</welcome-file>
     </welcome-file-list>
 
-    <!-- ✅ User Authentication Servlets -->
+
 <servlet>
     <servlet-name>SignupServlet</servlet-name>
     <servlet-class>com.megacitycab.controllers.SignupServlet</servlet-class>
@@ -46,7 +46,7 @@
         <url-pattern>/LogoutServlet</url-pattern>
     </servlet-mapping>
 
-        <!-- ✅ Password Reset Servlets -->
+
     <servlet>
         <servlet-name>ForgotPasswordServlet</servlet-name>
         <servlet-class>com.megacitycab.controllers.ForgotPasswordServlet</servlet-class>
@@ -65,7 +65,6 @@
         <url-pattern>/ResetPasswordServlet</url-pattern>
     </servlet-mapping>
 
- <!-- ✅ Booking Management Servlets -->
     <servlet>
         <servlet-name>BookingServlet</servlet-name>
         <servlet-class>com.megacitycab.controllers.BookingServlet</servlet-class>
@@ -75,7 +74,7 @@
         <url-pattern>/BookingServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- ✅ Fare Calculation Servlet -->
+
     <servlet>
         <servlet-name>CalculateFareServlet</servlet-name>
         <servlet-class>com.megacitycab.controllers.CalculateFareServlet</servlet-class>
@@ -85,7 +84,6 @@
         <url-pattern>/CalculateFareServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- ✅ Billing & Transactions Servlet -->
     <servlet>
         <servlet-name>BillingServlet</servlet-name>
         <servlet-class>com.megacitycab.controllers.BillingServlet</servlet-class>
@@ -95,7 +93,6 @@
         <url-pattern>/BillingServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- ✅ Profile Management Servlet -->
     <servlet>
         <servlet-name>ProfileServlet</servlet-name>
         <servlet-class>com.megacitycab.controllers.ProfileServlet</servlet-class>
@@ -105,7 +102,6 @@
         <url-pattern>/ProfileServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- ✅ Support & Help Servlet -->
     <servlet>
         <servlet-name>SupportServlet</servlet-name>
         <servlet-class>com.megacitycab.controllers.SupportServlet</servlet-class>
@@ -114,7 +110,6 @@
         <servlet-name>SupportServlet</servlet-name>
         <url-pattern>/SupportServlet</url-pattern>
     </servlet-mapping>
-    <!-- ✅ Admin Management Servlets -->
     <servlet>
         <servlet-name>AdminBookingServlet</servlet-name>
         <servlet-class>com.megacitycab.controllers.AdminBookingServlet</servlet-class>
@@ -151,15 +146,15 @@
         <url-pattern>/AdminDashboardServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- ✅ View Users Servlet -->
-    <servlet>
-        <servlet-name>ViewUsersServlet</servlet-name>
-        <servlet-class>com.megacitycab.controllers.ViewUsersServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ViewUsersServlet</servlet-name>
-        <url-pattern>/ViewUsersServlet</url-pattern>
-    </servlet-mapping>
+<servlet>
+    <servlet-name>ViewUsersServlet</servlet-name>
+    <servlet-class>com.megacitycab.controllers.ViewUsersServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ViewUsersServlet</servlet-name>
+    <url-pattern>/ViewUsersServlet</url-pattern>
+</servlet-mapping>
+
 
     <servlet>
         <servlet-name>ViewDriversServlet</servlet-name>
@@ -170,16 +165,100 @@
         <url-pattern>/ViewDriversServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- Add Driver Servlet -->
+<servlet>
+    <servlet-name>AddDriverServlet</servlet-name>
+    <servlet-class>com.megacitycab.controllers.AddDriverServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>AddDriverServlet</servlet-name>
+    <url-pattern>/AddDriverServlet</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>CustomerDashboardServlet</servlet-name>
+    <servlet-class>com.megacitycab.controllers.CustomerDashboardServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>CustomerDashboardServlet</servlet-name>
+    <url-pattern>/CustomerDashboardServlet</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+    <servlet-name>EditBookingServlet</servlet-name>
+    <servlet-class>com.megacitycab.controllers.EditBookingServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>EditBookingServlet</servlet-name>
+    <url-pattern>/EditBookingServlet</url-pattern>
+</servlet-mapping>
+
     <servlet>
-        <servlet-name>AddDriverServlet</servlet-name>
-        <servlet-class>com.megacitycab.controllers.AddDriverServlet</servlet-class>
+        <servlet-name>EditCarServlet</servlet-name>
+        <servlet-class>com.megacitycab.controllers.EditCarServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>AddDriverServlet</servlet-name>
-        <url-pattern>/AddDriverServlet</url-pattern>
+        <servlet-name>EditCarServlet</servlet-name>
+        <url-pattern>/EditCarServlet</url-pattern>
     </servlet-mapping>
-    <!-- ✅ UTF-8 Character Encoding -->
+
+    <servlet>
+        <servlet-name>UpdateCarServlet</servlet-name>
+        <servlet-class>com.megacitycab.controllers.UpdateCarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateCarServlet</servlet-name>
+        <url-pattern>/UpdateCarServlet</url-pattern>
+    </servlet-mapping>
+
+<servlet>
+    <servlet-name>EditDriverServlet</servlet-name>
+    <servlet-class>com.megacitycab.controllers.EditDriverServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>EditDriverServlet</servlet-name>
+    <url-pattern>/EditDriverServlet</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+    <servlet-name>UpdateDriverServlet</servlet-name>
+    <servlet-class>com.megacitycab.controllers.UpdateDriverServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UpdateDriverServlet</servlet-name>
+    <url-pattern>/UpdateDriverServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>EditUserServlet</servlet-name>
+    <servlet-class>com.megacitycab.controllers.EditUserServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>EditUserServlet</servlet-name>
+    <url-pattern>/EditUserServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>UpdateUser</servlet-name>
+    <servlet-class>com.megacitycab.controllers.UpdateUserServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UpdateUser</servlet-name>
+    <url-pattern>/UpdateUserServlet</url-pattern>
+</servlet-mapping>
+
+
     <filter>
         <filter-name>CharacterEncodingFilter</filter-name>
         <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
@@ -198,12 +277,10 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <!-- ✅ Session Timeout Configuration (30 Minutes) -->
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
-
-    <!-- ✅ Security Constraint (Optional - Add Later) -->
+    
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>Secure Area</web-resource-name>

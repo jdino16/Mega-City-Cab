@@ -30,7 +30,7 @@ public class ResetPasswordServlet extends HttpServlet {
             return;
         }
 
-        // Check if passwords match
+
         if (!newPassword.equals(confirmPassword)) {
             request.setAttribute("error", "⚠️ Passwords do not match. Try again.");
             request.getRequestDispatcher("resetPassword.jsp").forward(request, response);
@@ -48,7 +48,7 @@ public class ResetPasswordServlet extends HttpServlet {
             int result = stmt.executeUpdate();
 
             if (result > 0) {
-                session.removeAttribute("resetEmail"); // Clear session
+                session.removeAttribute("resetEmail"); 
                 request.setAttribute("message", "✅ Password updated successfully! Please log in.");
                 request.getRequestDispatcher("LoginPage.jsp").forward(request, response);
             } else {

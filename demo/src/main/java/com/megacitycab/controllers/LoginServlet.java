@@ -36,19 +36,19 @@ public class LoginServlet extends HttpServlet {
                     String username = rs.getString("name");
 
                     if (BCrypt.checkpw(password, storedHash)) {
-                        // Start session and store user details
+                    
                         HttpSession session = request.getSession();
                         session.setAttribute("userId", userId);
                         session.setAttribute("username", username);
                         session.setAttribute("role", role);
 
-                        // Redirect based on role
+       
                         if ("admin".equalsIgnoreCase(role)) {
-                            response.sendRedirect("adminDashboard.jsp"); // Admin dashboard
+                            response.sendRedirect("adminDashboard.jsp"); 
                         } else if ("driver".equalsIgnoreCase(role)) {
-                            response.sendRedirect("driverDashboard.jsp"); // Driver dashboard
+                            response.sendRedirect("driverDashboard.jsp");
                         } else {
-                            response.sendRedirect("customerDashboard.jsp"); // Customer dashboard
+                            response.sendRedirect("customerDashboard.jsp"); 
                         }
                     } else {
                         request.setAttribute("errorMessage", "Invalid password. Try again.");

@@ -20,13 +20,13 @@ public class ViewDriversServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Driver> drivers = new ArrayList<>();
         
-        // Get the driver details from the database
+   
         try (Connection conn = DatabaseUtil.getConnection()) {
             String sql = "SELECT driver_id, driver_name, phone, car_model, status FROM drivers ORDER BY driver_name";
             PreparedStatement stmt = conn.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
-            // Loop through the result set and add each driver's data to the list
+     
             while (rs.next()) {
                 Driver driver = new Driver();
                 driver.setDriverId(rs.getInt("driver_id"));
@@ -37,10 +37,9 @@ public class ViewDriversServlet extends HttpServlet {
                 drivers.add(driver);
             }
 
-            // Set the drivers list as a request attribute
+         
             request.setAttribute("drivers", drivers);
 
-            // Forward the request and response to the JSP for rendering
             request.getRequestDispatcher("/viewDrivers.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();

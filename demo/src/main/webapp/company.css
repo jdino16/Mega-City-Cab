@@ -145,65 +145,6 @@ body {
     width: 100%;
     text-align: center;
 }
-
-.sidebar.collapsed {
-    width: 80px;
-}
-
-/* ✅ Sidebar Navigation */
-.sidebar-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-links a {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding: 12px 20px;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-
-.sidebar-links a i {
-    font-size: 22px;
-    margin-right: 12px;
-    color: #FFEA00;
-}
-
-.sidebar-links a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
-}
-
-.sidebar-links a.active {
-    background: rgba(255, 234, 0, 0.4);
-    border-left: 5px solid #FFEA00;
-}
-
-/* ✅ Main Content */
-.content {
-    margin-left: 270px;
-    width: calc(100% - 270px);
-    padding: 50px 20px;
-    text-align: center;
-}
-
-/* ✅ Hero Section */
-.company-hero {
-    padding: 80px 50px;
-    text-align: center;
-    background: linear-gradient(135deg, #141E61, #09080D);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
-    border-bottom: 3px solid #FFEA00;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .hero-title {
     font-size: 3.5rem;
     font-weight: bold;

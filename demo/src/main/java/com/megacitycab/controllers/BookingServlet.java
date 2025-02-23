@@ -27,7 +27,7 @@ public class BookingServlet extends HttpServlet {
             double fare = Double.parseDouble(request.getParameter("fare"));
             String status = "Completed";
 
-            // ✅ Debugging logs - print incoming form data
+
             System.out.println("Booking Details:");
             System.out.println("Customer Name: " + customerName);
             System.out.println("Phone: " + phone);
@@ -37,34 +37,30 @@ public class BookingServlet extends HttpServlet {
             System.out.println("Distance: " + distance);
             System.out.println("Fare: " + fare);
 
-            // ✅ Validate required fields
             if (customerName.isEmpty() || phone.isEmpty() || address.isEmpty() || pickup.isEmpty() || destination.isEmpty()) {
                 request.setAttribute("errorMessage", "⚠️ All fields are required.");
                 request.getRequestDispatcher("booking.jsp").forward(request, response);
                 return;
             }
 
-            // ✅ Validate phone number (Sri Lanka format check)
             if (!phone.matches("^(?:7|0|(?:\\+94))[0-9]{8,9}$")) {
                 request.setAttribute("errorMessage", "⚠️ Invalid phone number format.");
                 request.getRequestDispatcher("booking.jsp").forward(request, response);
                 return;
             }
 
-            // ✅ Ensure address has a reasonable length
             if (address.length() < 5) {
                 request.setAttribute("errorMessage", "⚠️ Address must be at least 5 characters long.");
                 request.getRequestDispatcher("booking.jsp").forward(request, response);
                 return;
             }
 
-            // ✅ Insert Booking into Database
+
             String sqlBooking = "INSERT INTO bookings (user_id, customer_name, phone, address, pickup, destination, date, status) VALUES (?, ?, ?, ?, ?, ?, NOW(), ?)";
 
             try (Connection conn = DatabaseUtil.getConnection();
                  PreparedStatement stmtBooking = conn.prepareStatement(sqlBooking, Statement.RETURN_GENERATED_KEYS)) {
 
-                // Set parameters for booking
                 stmtBooking.setInt(1, userId);
                 stmtBooking.setString(2, customerName);
                 stmtBooking.setString(3, phone);
@@ -83,17 +79,17 @@ public class BookingServlet extends HttpServlet {
                         }
                     }
 
-                    // ✅ Insert Payment for this Booking
+
                     String sqlPayment = "INSERT INTO payments (user_id, booking_id, amount, payment_method, status) VALUES (?, ?, ?, ?, 'Unpaid')";
                     try (PreparedStatement stmtPayment = conn.prepareStatement(sqlPayment)) {
                         stmtPayment.setInt(1, userId);
                         stmtPayment.setInt(2, bookingId);
                         stmtPayment.setDouble(3, fare);
-                        stmtPayment.setString(4, "Cash"); // Default payment method
+                        stmtPayment.setString(4, "Cash"); 
                         stmtPayment.executeUpdate();
                     }
 
-                    // ✅ Redirect to Billing Page with Confirmation
+
                     response.sendRedirect("billing.jsp?message=✅ Booking Successful!");
                 } else {
                     request.setAttribute("errorMessage", "❌ Booking failed. Please try again.");

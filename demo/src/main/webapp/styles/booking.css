@@ -1,0 +1,240 @@
+/* 🌑 Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 🚖 Booking Container */
+.booking-container {
+    background: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(255, 234, 0, 0.5);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    margin-top: 50px;
+}
+
+/* 🚖 Booking Title */
+.booking-container h2 {
+    color: #FFEA00;
+    text-shadow: 0px 0px 12px rgba(255, 234, 0, 0.7);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* 📌 Form Labels */
+.booking-container label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: #cccccc;
+    margin: 10px 0 5px;
+}
+
+/* ✏️ Form Inputs */
+.booking-container input,
+.booking-container select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #333;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* 📅 Date Input */
+.booking-container input[type="datetime-local"] {
+    cursor: pointer;
+}
+
+/* 💰 Submit Button */
+.booking-container button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #FFD700, #FF9900);
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 5px 10px rgba(255, 234, 0, 0.5);
+}
+
+.booking-container button:hover {
+    background: linear-gradient(135deg, #FF9900, #FFD700);
+    box-shadow: 0px 5px 25px rgba(255, 234, 0, 1);
+    transform: scale(1.05);
+}
+
+/* 📜 Booking History */
+.booking-history {
+    margin-top: 40px;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+.booking-history h2 {
+    color: #FFEA00;
+    text-shadow: 0px 0px 12px rgba(255, 234, 0, 0.7);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.booking-history table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.booking-history th,
+.booking-history td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.booking-history th {
+    background: #333;
+    color: #FFEA00;
+    font-weight: bold;
+}
+
+.booking-history td {
+    color: #DDDDDD;
+}
+
+/* 🎛 Quick Action Buttons */
+.quick-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.quick-actions .action-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #FFD700, #FF9900);
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(255, 234, 0, 0.5);
+    width: 180px;
+    text-align: center;
+}
+
+.quick-actions .action-btn:hover {
+    background: linear-gradient(135deg, #FF9900, #FFD700);
+    box-shadow: 0px 5px 20px rgba(255, 234, 0, 1);
+    transform: scale(1.05);
+}
+/* 🔥 Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #09080D; /* Dark background for contrast */
+    color: white;
+}
+
+/* 🚀 Navbar Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000000; /* Dark background for navbar */
+    padding: 15px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects for Navbar */
+.navbar a:hover {
+    background: #FFEA00;  /* Bright yellow */
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 234, 0, 0.8);
+}
+
+.navbar a i {
+    margin-right: 10px;
+}
+
+/* ✅ Action Buttons Styles */
+.quick-actions {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.quick-actions .action-btn {
+    padding: 16px 35px;
+    background: linear-gradient(135deg, #FFD700, #FF9900);
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 234, 0, 0.5);
+    text-align: center;
+    min-width: 200px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover Effects for Action Buttons */
+.quick-actions .action-btn:hover {
+    background: linear-gradient(135deg, #FF9900, #FFD700);
+    box-shadow: 0px 10px 30px rgba(255, 234, 0, 1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.quick-actions .action-btn i {
+    margin-right: 10px; /* Adding space between the icon and the text */
+}

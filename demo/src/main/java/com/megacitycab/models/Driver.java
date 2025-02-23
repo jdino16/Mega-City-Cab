@@ -7,7 +7,6 @@ public class Driver {
     private String carModel;
     private String status;
 
-    // Getters and Setters
     public int getDriverId() {
         return driverId;
     }

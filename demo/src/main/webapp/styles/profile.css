@@ -1,0 +1,209 @@
+/* 🔥 Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #000000; /* Dark theme background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+/* ✅ Profile Container */
+.profile-container {
+    background-color: #222222;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+/* Heading Styles */
+.profile-container h2 {
+    font-size: 2rem;
+    color: #FFEA00;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 15px rgba(255, 234, 0, 0.6);
+}
+
+/* Form Styles */
+.profile-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form Inputs */
+.profile-container input {
+    padding: 12px;
+    background-color: #000000;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* Button Styles */
+.profile-container button {
+    padding: 12px;
+    background-color: #FFEA00;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.profile-container button:hover {
+    background-color: #FFA500;
+    transform: scale(1.05);
+}
+
+/* 🔒 Change Password Section */
+.profile-container h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: #FFEA00;
+    text-shadow: 0px 0px 10px rgba(255, 234, 0, 0.6);
+}
+
+.profile-container .form-password {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Icons in input fields */
+input[type="text"], input[type="email"], input[type="password"] {
+    position: relative;
+}
+
+input[type="text"]::before,
+input[type="email"]::before,
+input[type="password"]::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: FontAwesome;
+    font-size: 18px;
+    color: #FFEA00;
+}
+
+input[type="text"]:focus::before,
+input[type="email"]:focus::before,
+input[type="password"]:focus::before {
+    color: #FFA500;
+}
+
+/* Icon for "Save Changes" Button */
+button[type="submit"]::before {
+    content: '\f0c7'; /* Disk icon */
+    font-family: FontAwesome;
+    margin-right: 10px;
+}
+
+/* Password Change Icon */
+button[type="submit"]:nth-of-type(2)::before {
+    content: '\f021'; /* Lock icon */
+    font-family: FontAwesome;
+    margin-right: 10px;
+}
+/* 🔥 Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #09080D; /* Dark background for contrast */
+    color: white;
+}
+
+/* 🚀 Navbar Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000000; /* Dark background for navbar */
+    padding: 15px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects for Navbar */
+.navbar a:hover {
+    background: #FFEA00;  /* Bright yellow */
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 234, 0, 0.8);
+}
+
+.navbar a i {
+    margin-right: 10px;
+}
+
+/* ✅ Action Buttons Styles */
+.quick-actions {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.quick-actions .action-btn {
+    padding: 16px 35px;
+    background: linear-gradient(135deg, #FFD700, #FF9900);
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 234, 0, 0.5);
+    text-align: center;
+    min-width: 200px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover Effects for Action Buttons */
+.quick-actions .action-btn:hover {
+    background: linear-gradient(135deg, #FF9900, #FFD700);
+    box-shadow: 0px 10px 30px rgba(255, 234, 0, 1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.quick-actions .action-btn i {
+    margin-right: 10px; /* Adding space between the icon and the text */
+}

@@ -8,9 +8,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Dashboard - Mega City Cab</title>
-    <link rel="stylesheet" href="customerDashboard.jsp">
+    <link rel="stylesheet" href="customerDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.10.1/dist/gsap.min.js"></script>
 </head>
 <body>
+
+    <nav class="navbar">
+        <div class="navbar">
+            <a href="index.jsp" class="nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="our-cabs.jsp" class="nav-link"><i class="fas fa-taxi"></i> Our Cabs</a>
+            <a href="company.jsp" class="nav-link"><i class="fas fa-building"></i> Company</a>
+            <a href="booking.jsp" class="nav-link"><i class="fas fa-taxi"></i> Booking</a>
+            <a href="profile1.jsp" class="nav-link"><i class="fas fa-user"></i> Manage Profile</a>
+            <a href="help.jsp" class="nav-link"><i class="fas fa-question-circle"></i> Help</a> 
+            <a href="logout.jsp" class="nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a>    
+        </div>
+    </nav>
+    
 
 <%
     // Ensure user is logged in
@@ -55,28 +70,32 @@
     }
 %>
 
-<!-- ✅ Dashboard Summary -->
+
 <div class="dashboard-summary">
     <h2>🚖 Welcome, <%= session.getAttribute("username") %>!</h2>
     <p>Here's a quick overview of your recent activity.</p>
 
     <div class="dashboard-cards">
+   
         <div class="dashboard-card yellow">
+            <i class="fas fa-calendar-alt"></i>
             <h3>🚖 Upcoming Bookings</h3>
             <p><%= upcomingBookings %></p>
         </div>
         <div class="dashboard-card blue">
+            <i class="fas fa-check-circle"></i>
             <h3>📜 Completed Rides</h3>
             <p><%= completedRides %></p>
         </div>
+
         <div class="dashboard-card green">
+            <i class="fas fa-wallet"></i>
             <h3>💰 Total Spent</h3>
             <p>Rs <%= String.format("%.2f", totalSpent) %></p>
         </div>
     </div>
 </div>
 
-<!-- ✅ Recent Bookings Table -->
 <div class="recent-bookings">
     <h2>Your Recent Bookings</h2>
     <table>
@@ -110,18 +129,21 @@
     </table>
 </div>
 
-<!-- ✅ Action Buttons -->
+
 <div class="quick-actions">
-    <a href="booking.jsp" class="action-btn">📅 View Bookings</a>
-    <a href="billing.jsp" class="action-btn">💳 Billing & Transactions</a>
-    <a href="profile1.jsp" class="action-btn">👤 Edit Profile</a>
-    <a href="support.jsp" class="action-btn">❓ Get Support</a>
+    <a href="booking.jsp" class="action-btn"><i class="fas fa-calendar-check"></i> View Bookings</a>
+    <a href="billing.jsp" class="action-btn"><i class="fas fa-credit-card"></i> Billing & Transactions</a>
+    <a href="profile1.jsp" class="action-btn"><i class="fas fa-user-edit"></i> Edit Profile</a>
+    <a href="support.jsp" class="action-btn"><i class="fas fa-question-circle"></i> Get Support</a>
 </div>
 
 <%
     // Close database connection
     conn.close();
 %>
+
+
+<script src="customerDashboard.js"></script>
 
 </body>
 </html>

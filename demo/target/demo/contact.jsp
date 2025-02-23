@@ -6,24 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Mega City Cab</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="contact.css">
 </head>
 <body class="bg-black text-white">
 
-    <!-- 🚀 Sidebar Navigation -->
+
     <nav class="sidebar">
         <div class="sidebar-top">
             <h2 class="logo neon-text">Mega City Cab</h2>
             <button class="expand-btn"><i class="fas fa-bars"></i></button>
         </div>
-        <!-- Live Search -->
+
         <div class="search-wrapper">
             <input type="text" id="searchInput" placeholder="Search...">
             <i class="fas fa-search"></i>
@@ -40,14 +37,13 @@
         </ul>
     </nav>
 
-    <!-- 📞 Contact Information Section -->
     <main class="content">
         <section class="contact-hero">
             <h1 class="contact-title">📞 Contact Mega City Cab</h1>
             <p class="contact-description">Reach out to us for support, bookings, or inquiries. We are here 24/7!</p>
         </section>
 
-        <!-- 🌍 Contact Details -->
+    
         <section class="contact-details">
             <div class="contact-box">
                 <h2><i class="fas fa-phone"></i> Phone Support</h2>
@@ -56,8 +52,8 @@
             </div>
             <div class="contact-box">
                 <h2><i class="fas fa-envelope"></i> Email</h2>
-                <p><a href="mailto:support@megacitycab.com">support@megacitycab.com</a></p>
-                <p><a href="mailto:info@megacitycab.com">info@megacitycab.com</a></p>
+                <p><a href="megacitycab@gmail.com">support@megacitycab.com</a></p>
+                <p><a href="Dinomegacitycab@gmail.com">info@megacitycab.com</a></p>
             </div>
             <div class="contact-box">
                 <h2><i class="fas fa-map-marker-alt"></i> Office Address</h2>
@@ -70,7 +66,6 @@
         </section>
     </main>
 
-    <!-- JavaScript -->
     <script src="contact.js"></script>
 </body>
 </html>

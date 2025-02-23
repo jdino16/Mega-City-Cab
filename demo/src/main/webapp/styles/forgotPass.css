@@ -1,0 +1,112 @@
+/* Forgot Password Page Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #191BDF, #09080D);
+    color: white;
+    margin: 0;
+}
+
+.forgot-pass-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(255, 234, 0, 0.5);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.forgot-pass-container h2 {
+    font-size: 24px;
+    color: #FFEA00;
+    text-shadow: 0px 0px 10px rgba(255, 234, 0, 0.8);
+}
+
+.forgot-pass-container p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.error-message {
+    color: #FF4C4C;
+    background: rgba(255, 76, 76, 0.2);
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    animation: shake 0.5s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #FFEA00;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #FFD700;
+    box-shadow: 0px 0px 10px rgba(255, 234, 0, 0.8);
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background: linear-gradient(135deg, #FFD700, #FFEA00);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #FFCC00, #FFD700);
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgba(255, 234, 0, 0.8);
+}
+
+a {
+    color: #FFEA00;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}

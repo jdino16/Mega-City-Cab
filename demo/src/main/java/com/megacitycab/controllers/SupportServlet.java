@@ -3,6 +3,7 @@ package com.megacitycab.controllers;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.megacitycab.utils.DatabaseUtil;
-
 
 public class SupportServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,7 +33,7 @@ public class SupportServlet extends HttpServlet {
                 request.setAttribute("errorMessage", "Failed to submit inquiry.");
                 request.getRequestDispatcher("support.jsp").forward(request, response);
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             request.setAttribute("errorMessage", "Database error: " + e.getMessage());
             request.getRequestDispatcher("support.jsp").forward(request, response);

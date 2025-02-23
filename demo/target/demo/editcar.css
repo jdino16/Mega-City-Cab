@@ -1,0 +1,239 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Left Sidebar */
+.sidebar-left {
+    width: 220px;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+    z-index: 10;
+    border-right: 2px solid #333;
+}
+
+.logo {
+    text-align: center;
+    color: #ffcc00;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #000000;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.nav-link i {
+    margin-right: 10px;
+}
+
+.nav-link:hover {
+    background-color: #000000;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Right Sidebar */
+.sidebar-right {
+    width: 220px;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: 20px;
+    z-index: 10;
+    border-left: 2px solid #333;
+}
+
+.action-buttons {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.action-btn {
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: all 0.3s;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    text-shadow: 0 0 5px #000000;
+}
+
+.action-btn:hover {
+    background-color: #000000;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    margin: 20px 240px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #000000;
+}
+
+/* Form Styles */
+.car-form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ffcc00;
+}
+
+label {
+    margin: 10px 0 5px;
+    color: #ffcc00;
+    font-weight: bold;
+    text-shadow: 0 0 5px #000000;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: all 0.3s;
+    outline: none;
+    box-shadow: 0 0 5px #000000;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #ff9900;
+    box-shadow: 0 0 10px #ff9900;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    border: none;
+    color: #000;
+    padding: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.3s;
+    font-weight: bold;
+    box-shadow: 0 0 10px #ffcc00;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff9900;
+    box-shadow: 0 0 15px #ff9900;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #111;
+    border-top: 2px solid #333;
+    color: #ffcc00;
+    box-shadow: 0 0 15px #000000;
+    z-index: 5;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffcc00;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #222;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .sidebar-left, .sidebar-right {
+        width: 180px;
+    }
+
+    .content {
+        margin: 20px 200px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .sidebar-left, .sidebar-right {
+        width: 150px;
+    }
+
+    .content {
+        margin: 20px 160px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .nav-link, .action-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+    }
+}

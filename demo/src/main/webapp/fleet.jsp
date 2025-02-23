@@ -6,24 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Fleet - Mega City Cab</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- FontAwesome for Icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- Custom Styles -->
+ 
     <link rel="stylesheet" href="fleet.css">
 </head>
 <body class="bg-black text-white">
 
-    <!-- 🚀 Sidebar Navigation -->
+    
     <nav class="sidebar">
         <div class="sidebar-top">
             <h2 class="logo neon-text">Mega City Cab</h2>
             <button class="expand-btn"><i class="fas fa-bars"></i></button>
         </div>
-        <!-- Live Search -->
+      
         <div class="search-wrapper">
             <input type="text" id="searchInput" placeholder="Search...">
             <i class="fas fa-search"></i>
@@ -40,13 +39,12 @@
         </ul>
     </nav>
 
-    <!-- 🌟 Main Fleet Content -->
     <main class="content">
         <section class="fleet-section">
             <h1 class="fleet-title neon-text">🚘 Explore Our Premium Fleet</h1>
             <p class="fleet-description">Find the perfect cab for your next journey!</p>
 
-            <!-- 🔄 Fleet Filter Options -->
+     
             <div class="fleet-filter">
                 <button class="filter-btn active" data-category="all">All</button>
                 <button class="filter-btn" data-category="economy">🚗 Economy</button>
@@ -58,7 +56,7 @@
                 <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
 
                 <div class="fleet-container">
-                    <!-- 🚗 Car 1 - Standard Sedan (Economy) -->
+             
                     <div class="fleet-card" data-category="economy">
                         <div class="fleet-icon"><i class="fas fa-car-side"></i></div>
                         <div class="fleet-details">
@@ -73,7 +71,6 @@
                         </div>
                     </div>
 
-                    <!-- 🚙 Car 2 - Luxury SUV -->
                     <div class="fleet-card" data-category="luxury">
                         <div class="fleet-icon"><i class="fas fa-car"></i></div>
                         <div class="fleet-details">
@@ -89,7 +86,7 @@
                         </div>
                     </div>
 
-                    <!-- 🚐 Car 3 - Family Van -->
+               
                     <div class="fleet-card" data-category="family">
                         <div class="fleet-icon"><i class="fas fa-shuttle-van"></i></div>
                         <div class="fleet-details">
@@ -116,7 +113,6 @@
                                 </div>
                             </div>
                     
-                            <!-- 🚕 Taxi 2 - Hybrid Taxi -->
                             <div class="fleet-card" data-category="taxi">
                                 <div class="fleet-icon"><i class="fas fa-car"></i></div>
                                 <div class="fleet-details">
@@ -130,7 +126,7 @@
                                 </div>
                             </div>
                     
-                            <!-- 🚕 Taxi 3 - Express Taxi -->
+                     
                             <div class="fleet-card" data-category="taxi">
                                 <div class="fleet-icon"><i class="fas fa-car-alt"></i></div>
                                 <div class="fleet-details">
@@ -144,7 +140,7 @@
                                 </div>
                             </div>
                     
-                            <!-- 🚐 Family Van 1 -->
+                    
                             <div class="fleet-card" data-category="family">
                                 <div class="fleet-icon"><i class="fas fa-shuttle-van"></i></div>
                                 <div class="fleet-details">
@@ -158,7 +154,7 @@
                                 </div>
                             </div>
                     
-                            <!-- 🚐 Family Van 2 -->
+          
                             <div class="fleet-card" data-category="family">
                                 <div class="fleet-icon"><i class="fas fa-van-shuttle"></i></div>
                                 <div class="fleet-details">
@@ -172,7 +168,7 @@
                                 </div>
                             </div>
                     
-                            <!-- 🚐 Family Van 3 -->
+               
                             <div class="fleet-card" data-category="family">
                                 <div class="fleet-icon"><i class="fas fa-truck-pickup"></i></div>
                                 <div class="fleet-details">
@@ -186,7 +182,7 @@
                                 </div>
                             </div>
                     
-                            <!-- 🚖 Premium Taxi 1 -->
+                       
                             <div class="fleet-card" data-category="premium">
                                 <div class="fleet-icon"><i class="fas fa-car"></i></div>
                                 <div class="fleet-details">
@@ -200,7 +196,7 @@
                                 </div>
                             </div>
                     
-                            <!-- 🚖 Premium Taxi 2 -->
+                 
                             <div class="fleet-card" data-category="premium">
                                 <div class="fleet-icon"><i class="fas fa-car-alt"></i></div>
                                 <div class="fleet-details">
@@ -214,7 +210,7 @@
                                 </div>
                             </div>
                     
-                            <!-- 🚌 Mini Bus 1 -->
+               
                             <div class="fleet-card" data-category="bus">
                                 <div class="fleet-icon"><i class="fas fa-bus"></i></div>
                                 <div class="fleet-details">
@@ -227,7 +223,7 @@
                                 </div>
                             </div>
                     
-                            <!-- 🚌 Mini Bus 2 -->
+                       
                             <div class="fleet-card" data-category="bus">
                                 <div class="fleet-icon"><i class="fas fa-bus-alt"></i></div>
                                 <div class="fleet-details">
@@ -241,7 +237,7 @@
                                 </div>
                             </div>
                     
-                            <!-- 🚌 Mini Bus 3 -->
+                 
                             <div class="fleet-card" data-category="bus">
                                 <div class="fleet-icon"><i class="fas fa-bus"></i></div>
                                 <div class="fleet-details">
@@ -266,7 +262,6 @@
         </section>
     </main>
 
-    <!-- JavaScript -->
     <script src="fleet.js"></script>
 </body>
 </html>

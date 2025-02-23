@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-100">
 
-    <!-- Sidebar -->
+
     <div class="flex">
         <div class="w-1/4 bg-gray-800 text-white min-h-screen p-5">
             <h1 class="text-3xl font-bold mb-8">Admin Dashboard</h1>
@@ -20,7 +20,7 @@
             </ul>
         </div>
 
-        <!-- Main Content Area -->
+      
         <div class="w-3/4 p-8">
             <h2 class="text-3xl font-bold mb-4">Manage Cars</h2>
             

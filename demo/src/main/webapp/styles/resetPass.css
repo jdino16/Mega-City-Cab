@@ -1,0 +1,114 @@
+/* Reset Password Page Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #000000);
+    color: white;
+    margin: 0;
+}
+
+.reset-pass-container {
+    background: rgb(0, 0, 0);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 0.8s ease-in-out;
+    border: 2px solid #FFD700;
+}
+
+.reset-pass-container h2 {
+    font-size: 24px;
+    color: #FFD700;
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+}
+
+.reset-pass-container p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.error-message {
+    color: #FF4C4C;
+    background: rgba(255, 76, 76, 0.2);
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    animation: shake 0.5s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #FFD700;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    background: rgb(0, 0, 0);
+    color: white;
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #FFF200;
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background: linear-gradient(135deg, #FFD700, #FFF200);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #FFC400, #FFF700);
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgba(255, 215, 0, 0.8);
+}
+
+a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #FFF200;
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}

@@ -24,7 +24,7 @@ public class SignupServlet extends HttpServlet {
         String nic = request.getParameter("nic");
         String phone = request.getParameter("phone");
         String address = request.getParameter("address");
-        String role = request.getParameter("role"); // Role can be "admin", "customer", or "driver"
+        String role = request.getParameter("role"); 
 
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
 
@@ -53,7 +53,7 @@ public class SignupServlet extends HttpServlet {
                 insertStmt.setString(4, nic);
                 insertStmt.setString(5, phone);
                 insertStmt.setString(6, address);
-                insertStmt.setString(7, role); // Save the role to the database
+                insertStmt.setString(7, role); 
 
                 int result = insertStmt.executeUpdate();
                 if (result > 0) {

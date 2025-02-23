@@ -17,10 +17,10 @@ public class PaymentServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int userId = Integer.parseInt(request.getParameter("userId"));
         int bookingId = Integer.parseInt(request.getParameter("bookingId"));
-        double baseFare = 5.0; // Base fare
-        double perKmRate = 2.0; // Fare per KM
+        double baseFare = 5.0; 
+        double perKmRate = 2.0; 
         double distance = Double.parseDouble(request.getParameter("distance"));
-        double taxRate = 0.05; // 5% tax
+        double taxRate = 0.05; 
 
         double amount = baseFare + (perKmRate * distance);
         double tax = amount * taxRate;

@@ -6,21 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Mega City Cab</title>
 
-    <!-- ✅ Tailwind CSS -->
+
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- ✅ FontAwesome for Icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- ✅ Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- ✅ Custom Styles -->
+
     <link rel="stylesheet" href="loginPage.css">
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
 
-    <!-- 🚀 Sidebar Navigation -->
+
     <nav class="sidebar">
         <div class="sidebar-top">
             <h2 class="logo neon-text">Mega City Cab</h2>
@@ -38,18 +37,16 @@
         </ul>
     </nav>
 
-    <!-- 🚀 Login Form -->
     <div class="login-container">
         <h2 class="text-3xl font-semibold neon-glow">🔐 Welcome Back</h2>
         <p class="text-gray-300">Sign in to continue your journey with Mega City Cab</p>
 
-        <!-- 🔹 Error Message Display -->
+       
         <% String error = request.getParameter("error"); %>
         <% if (error != null) { %>
             <p class="error-message">⚠️ Invalid Email or Password</p>
         <% } %>
 
-        <!-- 🔹 Login Form -->
         <form action="LoginServlet" method="post" id="loginForm">
             <div class="form-group">
                 <label for="email"><i class="fas fa-envelope"></i> Email</label>
@@ -66,14 +63,14 @@
             <button type="submit" class="login-btn">🚀 Login</button>
         </form>
 
-        <!-- 🔹 Links -->
+      
         <p class="auth-link">
             <a href="Signup.jsp">Don't have an account? Sign up</a> | 
             <a href="ForgotPassword.jsp">Forgot Password?</a>
         </p>
     </div>
 
-    <!-- ✅ JavaScript -->
+
     <script src="loginPage.js"></script>
 
 </body>

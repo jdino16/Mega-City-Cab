@@ -6,24 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Cabs - Mega City Cab</title>
 
-    <!-- Tailwind CSS -->
+
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- Custom Styles -->
+
     <link rel="stylesheet" href="our-cabs.css">
 </head>
 <body class="bg-black text-white">
 
-    <!-- 🚀 Sidebar Navigation -->
+ 
     <nav class="sidebar">
         <div class="sidebar-top">
             <h2 class="logo neon-text">Mega City Cab</h2>
             <button class="expand-btn"><i class="fas fa-bars"></i></button>
         </div>
-        <!-- Live Search -->
+
         <div class="search-wrapper">
             <input type="text" id="searchInput" placeholder="Search...">
             <i class="fas fa-search"></i>
@@ -40,14 +39,14 @@
         </ul>
     </nav>
 
-    <!-- 🚖 Our Cabs Section -->
+
     <main class="content">
         <section class="cabs-hero">
             <h1 class="cabs-title">🚖 Our Premium Cabs</h1>
             <p class="cabs-description">Choose from our wide range of premium and budget-friendly cabs for your comfortable ride in Colombo.</p>
         </section>
 
-        <!-- 🌟 Cabs Grid -->
+  
         <section class="cabs-grid">
             <div class="cab-card">
                 <i class="fas fa-car-side cab-icon"></i>
@@ -72,7 +71,7 @@
         </section>
     </main>
 
-    <!-- JavaScript -->
+  
     <script src="our-cabs.js"></script>
 </body>
 </html>

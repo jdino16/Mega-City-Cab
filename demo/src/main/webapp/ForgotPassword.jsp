@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Forgot Password - Mega City Cab</title>
-    <link rel="stylesheet" href="forgotPass.css">
+    <link rel="stylesheet" href="styles/forgotPass.css">
 </head>
 <body>
     <div class="forgot-pass-container">
